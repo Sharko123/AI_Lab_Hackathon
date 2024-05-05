@@ -1,0 +1,173 @@
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background-color: #8595c7;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.designing {
+  border: 1px solid #ccc;
+  margin: 20px;
+  padding: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.neatLay {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #555;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+select:focus {
+  outline: none;
+  border-color: #8595c7;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #8595c7;
+  color: white;
+  cursor: pointer;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #8595c7;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.designing {
+  border: 5px solid white;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.neatLay {
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace
+}
+
+h3 {
+  text-align: center;
+}
+.dropdowns, select {
+  appearance: none;
+  padding: 10px 15px;
+  /* width: 100%; */
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  color: #555;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 10px;
+}
+
+.dropdowns:focus {
+  outline: none;
+  border-color: #8595c7;
+}
+
+.input-fields {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.button-24 {
+  background: #6c526f;
+  border: 1px solid #8595c7;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  display: flex;
+  transition: 0.3s;
+}
+
+.button-24:hover,{
+  background-color: #ad78d9;
+  background-position: 0 0;
+  color: #ffffff;
+}
+.button-24:active {
+  background-color: #380264;
+}
+
+.designingtwo {
+  border: 5px solid white;
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    font-family:'Courier New', Courier, monospace6;
+    text-align: center;
+}
+
+.designingthree {
+  border: 5px solid white;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  line-height:25px;
+}
+
+ul {
+  list-style-type: none;
+}

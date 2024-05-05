@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+
+</head>
+  <!--'center_id', 'meal_id', 'checkout_price',
+   'base_price', 'emailer_for_promotion', 'homepage_featured',
+   'city_code', 'region_code', 'center_type', 'op_area',
+   'category', 'cuisine', 'discount amount', 'discount percent',
+   'discount y/n', 'city_enc_4' -->
+  
+
+<body>
+
+  <form action = "{{ url_for('predict') }}" method = "post">
+    <div class="designing">
+      <center>
+        <h1>Food Order Predictor</h1>
+        <p>Never Waste Again!</p>
+      </center>
+      <br>
+      <div class="neatLay">
+        <center><h3>Dropdowns</h3></center>
+        <select id="category" name = "category">
+            <option value="" disabled selected>Category</option>
+            <option value="Starters">Starters</option>
+            <option value="Beverages">Beverages</option>
+            <option value="Desert">Desert</option>
+            <option value="Seafood">Seafood</option>
+            <option value="Snacks">Snacks</option>
+            <option value="Extras">Extras</option>
+            <option value="Biryani">Biryani</option>
+            <option value="Soup">Soup</option>
+            <option value="Sandwich">Sandwich</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Pasta">Pasta</option>
+            <option value="Salad">Salad</option>
+            <option value="Rice Bowl">Rice Bowl</option>
+        </select>
+        <select id="cuisine" name = "cuisine">
+            <option value="" disabled selected>Cuisine</option>
+            <option value="Continental">Continental</option>
+            <option value="Indian">Indian</option>
+            <option value="Thai">Thai</option>
+            <option value="Italian">Italian</option>
+        </select>
+        <select id="city_enc_4" name = "city_enc_4">
+            <option value="" disabled selected>City Population Type</option>
+            <option value="CH1">Extremely Populated</option>
+            <option value="CH2">Very Populated</option>
+            <option value="CH3">Pretty Populated</option>
+            <option value="CH4">Sparsely Populated</option>
+        </select>
+        <select id="discount_yn" name = "discount_yn">
+            <option value="" disabled selected>Discount (y/n)</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+        <select id="homepage_features" name = "homepage_features">
+            <option value="" disabled selected>Homepage Feature? (y/n </option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+        <select id="emailer_promotion" name = "emailer_promotion">
+            <option value="" disabled selected>Promotion Email?</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+        <center><h3>Input</h3></center>
+        <input name = "checkout_price" type="text" id="checkout_price" placeholder="Checkout Price">
+        <input name = "base_price" type="text" id="base_price" placeholder="Base Price">
+        <input name = "discount_amount" type="text" id="discount_amount" placeholder="Discount Amount">
+        <input name = "discount_percent" type="text" id="discount_percent" placeholder="Discount Percent">
+      </div>
+    <center><button class="button-24" >Submit</button></center>
+    </div>
+  </form>
+</body>
+
+</html>
