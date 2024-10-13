@@ -3,6 +3,8 @@ import numpy as np
 import joblib
 from xgboost import XGBRegressor
 import pandas as pd
+import requests
+
 
 app = Flask(__name__)
 
@@ -12,7 +14,26 @@ model = joblib.load("xgb_model.pkl")
 @app.route('/')
 def index():
   return render_template('index.html')
+def search_food_drives(city):
+  api_key = 'AIzaSyDCeQNu6b5FaJZF8nyPc7mCLREVVxjG2NI'
+  url = f'https://maps.googleapis.com/maps/api/place/textsearch/json'
+  params = {'query': f'food drive near {city}', 'key': api_key}
 
+  response = requests.get(url, params=params)
+  data = response.json()
+  final = []
+  print(data)
+  if 'results' in data:
+    for result in data['results']:
+      name = result['name']
+      address = result['formatted_address']
+      final.append(f'Name: {name} \n Address: {address}')
+      print("FINAL: ", final)
+    return final
+  else:
+    print('No food drives found.')
+    final = "No food drives found."
+    return final
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
@@ -85,26 +106,5 @@ if __name__ == '__main__':
   app.debug = False
   app.run()
 
-import requests
 
 
-def search_food_drives(city):
-  api_key = 'AIzaSyDCeQNu6b5FaJZF8nyPc7mCLREVVxjG2NI'
-  url = f'https://maps.googleapis.com/maps/api/place/textsearch/json'
-  params = {'query': f'food drive near {city}', 'key': api_key}
-
-  response = requests.get(url, params=params)
-  data = response.json()
-  final = []
-  print(data)
-  if 'results' in data:
-    for result in data['results']:
-      name = result['name']
-      address = result['formatted_address']
-      final.append(f'Name: {name} \n Address: {address}')
-      print("FINAL: ", final)
-    return final
-  else:
-    print('No food drives found.')
-    final = "No food drives found."
-    return final
